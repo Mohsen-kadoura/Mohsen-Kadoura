@@ -7,239 +7,365 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <style>
-    /* General  */
-    html,
-    body {
-      width: 100%;
-    }
-    
-    body {
-      margin-top: 52px;
-    }
-    
-    #myName {
-      color: blue;
-    }
-    
-    /* Navigation Bar */
-    .navibar {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-      padding-left: 25px;
-      padding-right: 25px;
-    }
-    
-    .row {
-      margin-right: -15px;
-      margin-left: -15px;
-    }
-    
-    /* Page header section */
-    .jumbotron {
-      background: transparent;
-    }
-    
-    .jumbotron h2 {
-      color: rgba(250, 200, 90, 0.9);
-      text-shadow: 1px 1px 0px #000, 1px 1px 0px #fd0;
-    }
-    .jumbotron h3 {
-      text-shadow: 1px 1px 2px #000, 1px 2px 2px #000;
-    }
-    
-    .page-header {
-      margin-left: auto;
-      margin-right: auto;
-      width: 30%;
-      opacity: 0.8;
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-    }
-    
-    .row.social {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .header {
-      color: #fff;
-      background: transparent
-        url("https://lh3.googleusercontent.com/IiIdj7dLaSV-A7GtQg56WPdIDRBZBCimOISV5vKLLDS7HB9QNIKuXofY6BWSPvppqYl6Fgnq39nnvxilC9EmD2wzLvd1T_Cy1rq2aaq4wLUYuyk5kagT2Qcva45_Ia95cyRO_6PmaVwdVoW1pwzxQAWbPxQXV-B4-RRfAvIs4qrKWgHeVWxQ2uMM-QPxDwJaI3vEWZFAw7usOxgdbtBroNGqBnNw5sPWFy4sWqLh-ZJyBbI7lx_rMYzJ6t8Jzp5nS06jiyBi2KsSYDYz2cDqHBoAuhVksxj-eYQ3p0MLbrrQQC55R9voHhLya2_xbTgyv-5dLKM0G26-Tbh-clOoiKeF3FL6JF1Fcx3wCMSaxff0u5cmjTIQz9SUtU0G2g9Y7GVRQxCvVSyjQdXznDN1awNxCM7gUinj8HNs4IyC7lDTM8QN-VZdnEBPU0smxJNXrTBfy82L26E9PU4Zdta3iw5npda6fNRBpfUSZhtQhx_eUqdrfgngqvInOenSTmQXZxOf0iHFSBqrg5hRtJn3L3G6K9Ty0PaArO18IhMmR4uSownEogFnYyM1Ui_yTrFUQMXQ2uBAASJ7P5rLuYR6HbpJ9CXWQD_43xdlhWehnGd41HC8Y5SeVR4z=w910-h607-no")
-        no-repeat fixed center center / cover;
-      height: 750px;
-      text-shadow: 1px 1px 2px #000;
-    }
-    
-    /* About section title */
-    .header h3 {
-      padding: 0 1em;
-    }
-    
-    /* Dark but semitranspatent slide style to faciltiate reading */
-    .backgrnd {
-      background: rgba(0, 0, 0, 0.35);
-      height: 925px;
-    }
-    
-    /* About section photo */
-    .img-circle {
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-    
-    /* Social buttons */
-    .social .btn-group-lg > .btn,
-    .btn-lg {
-      display: inline-block;
-      margin: 5px;
-      color: #000;
-      background: rgba(215, 213, 213, 0.7) none repeat scroll 0% 0%;
-      text-shadow: 1px 1px 1px #000;
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-      letter-spacing: 2px;
-      transition: all 0.2s ease 0s;
-    }
-    
-    /* Body of about section */
-    .header2 {
-      padding-top: 50px;
-      padding-bottom: 150px;
-      color: #fff;
-      background: transparent
-        url("https://lh3.googleusercontent.com/Y7tdwEfzyq47dGaXyz4k7IpNJlvf0BB6YvKzagGBqnKJxXFdPrxdYGnDx0WEKnAz5B_xoX3kRLe1KuYiquvut1_YD2MPzCN0ckXh6TcN43hi03IRe8XUcfRHEgTbN8AnnPCB6r7Yqkt28QALUrWrKFKVvvQOZQFBVBQ70cRy61R91t06RaR3vOFnh4yEsHctG3Nh0DpBTydfRL-SMMDgl3R6YFXuUcM-FeITztVqZFPE6hXhQ3ZS4jcEJogPNGcvUQt-97yeLIX4t0N8CkdsRZIr4-lnnKXF4_JH7TF6Co_uZo5yz7_ECfJoC_3Ih5zk1R0VHP0Wq_PXdNRXyQFpfzFsWt4LahlRVNDv57rTYm_24Jbq-kb2gAJqRpUTV89KJTY8nK2pwm9TR-Fg2OnbrtKug6CmLtwu21KJoWhD6Yzgr2k87qADAOHd6Bz1t39QECf0Yb8utKp8omAceB4_guNonHRxDAKp5fE51RtZFIv3Z_qqmruRJV--huEVsra6v4bmVPeLiGL4s78WYOGKmTd4cPXcBNN9gB0OFjOOsgCuqSazb5vaBdlhTGDpjYI9j7a0lhJoKgGQJYzmhdB7zWzujYla7MJKCpJm3URsDFe9aUgboz4yRga9=w909-h607-no")
-        no-repeat fixed center center / cover;
-      background-size: cover;
-      height: 1050px;
-      text-shadow: 1px 1px 1px #000;
-    }
-    
-    .header2 h2 {
-      padding-left: 20px;
-    }
-    
-    .lead {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    
-    .lead a {
-      font-weight: bold;
-      color: rgb(248, 245, 6) !important;
-      background-color: transparent;
-    }
-    
-    blockquote footer {
-      color: rgb(248, 245, 6);
-      background-color: transparent;
-    }
-    
-    /* Portofolio section */
-    .header3 {
-      padding-top: 50px;
-      padding-bottom: 200px;
-      color: rgba(250, 200, 90, 0.9);
-      font-weight: 700;
-      text-shadow: 1px 1px 0px #000, 1px 1px 0px #fd0;
-      background: transparent
-        url("https://lh3.googleusercontent.com/cPnFQ4Tx6FB1sk1vhrDGrye2Ms3T4sLgewkfAm6XMl5jc3agQwzF9TgkQugTeQJRKkIZl4Omxi3rDEbuy5jIzfV3dnzW9NrUqjSS71f0nJBcoAqj5gKrFWkC4etBfQViUoRmoYgAOwqRPBcAQ5LNblp94Od5uyJ5xxYASabf-3eLJdYoH5FBCAllHEUClZRwKvTm6YUij7aaM_v2bSTVr4xx2_WRjub4Wf9G572A-3egphXsv4v373UjpVMyAm9SzEEyiQXWzGbR8EgnaA5gMHMdbQncQKs9IgjauFBpxt608YUVawojzqPl8LYycA9E3wHm8rbnUT8xje_hWfrimccebUtWdPRk0MVNLjCsyHdV3xqdH1WYgWX4T7DFdn_a3wQmjZJYW0F2n2ROEI8-w6srK3hQresl0ttQsBuMkbmqwyo149MAGGypjBbBr3GUTeugCrEircHwOkxfNIlToH4Vj4tXWzcGxjELlFoPigXXKxceJCvclGt7iuMhs3YCbKkaKAmm2a1sxqy3Q08LD7dPgOBTTjXdvXifmztjVWzzLncRvEednBgGoArgMl8pat1r38jrx5dtK0rACVCqXsfCqGuCeYRqdUTnFjuLWv6e2eXfznGU5uk2=w1062-h607-no")
-        no-repeat fixed center center / cover;
-      height: 1160px;
-    }
-    
-    .portfolio {
-      margin: 0 0 100px 0;
-    }
-    
-    .header3 h4,
-    h5 {
-      color: #fff;
-      font-weight: 700;
-      text-shadow: 1px 1px 0px #000, 1px 1px 0px #000;
-    }
-    
-    /* Contact Me section */
-    .header4 {
-      background: transparent
-        url("https://lh3.googleusercontent.com/B5nAKt8P_WfjMlCZGwmfEYTWMEml7t8g9Mr-Rh0qpyun4QY7hW9KQkETWxHr1UKS0Tn1TMzJlLffPY7tNqtE9VbEyodncBaW0QSdOfq6UP-xwh5USGe-ZX6kURf0DK4WX5IWRWFd2K1dHe0B2z0c4XdsxeTJbcULuk5CLGQc1s49U9bJZOWzWFOuXgJH0r-VjZjzQpWoxuUa3bX83IZgey9i2DHYQzoF2PYvFjPFL0PDVzM9kWZr9jDAa0k17ZeMbpRgDxLvNHbW4TkGKk2YfMEbXs0UDA6QxHQqoasiz83A9TK_5x66fgHfCZATCkuPwwivUzVw6a8UX5h1iYOlzrEJBVodoSAEMc1QtWXXwVpGM_rBk0SOpdjJghzsYJIUxMp8Km4Upxb0yWMtfGclyCe7x6MVE0v-Fm6ydKYBQXRB7bsIOBA9Njrafr2MhideNgNIF3BztQ4u-iM0Mz6EIEgqdWqnlNN7zYnCHDrXdhTsrPCohXPmf1omauptb87XvGxK5abyJ10eb4DJlWujc9jel3YaNnwMnIT12jLmNO3jj0fIwl2vvssFWpWfCzczpG3X5SVt1UQ2uB6cZ4csy_GowRDd1PrqbWtjC5rjOt4ihrA6r6NqMW9w=w1289-h450-no")
-        no-repeat fixed center center / cover;
-      height: 150px;
-    }
-    
-    .header4 .row {
-      color: rgb(248, 245, 6) !important;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 1px -1px 0px rgba(0, 0, 0, 0.2);
-      width: 85%;
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-    
-    .header4 .row a {
-      padding-left: 1em;
-      padding-right: 1em;
-      padding-top: 0.25em;
-      padding-bottom: 0.25em;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10%;
-      margin-left: 5% !important;
-      margin-right: 5% !important;
-      color: rgb(248, 245, 6) !important;
-      background-color: red;
-      font-size: 1.4em;
-      font-weight: bold;
-      text-shadow: 1px 1px 1px #000, 1px -1px 0px rgba(0, 0, 0, 0.3);
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-      letter-spacing: 2px;
-    }
-    
-    /* Page footer */
-    footer {
-      background-color: #ccc;
-      padding-top: 2em;
-      padding-bottom: 8em;
-      padding-left: 4em;
-	  text-align: center;
-    }
-		
-	
-	
-    @media (max-width: 991px) {
-      .social .btn-group-lg > .btn,
-      .btn-lg {
-        display: block;
-        max-width: 300px;
-        margin: 10px auto;
-      }
-	  
-	  
-    
-      .row.social {
-        width: 80%;
-      }
-    
-      .backgrnd {
-        height: 985px;
-      }
-    }
-    
-    @media (max-width: 479px) {
-      .header4 .row a {
-        font-size: 1em;
-        margin-left: -1em !important;
-      }
-    }
+	    /* General  */
+	html,
+	body {
+	  width: 100%;
+	}
+
+	body {
+	  margin-top: 7vh;
+	}
+
+	/* Navigation Bar */
+	.navibar {
+	  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	  padding-left: 25px;
+	  padding-right: 25px;
+	}
+
+	.nav a {
+	  font-size: 1.3em;
+	  color: #333;
+	  font-family: Arial, Helvetica, sans-serif !important;
+	}
+
+	.glyphicon {
+	  margin-right: 0.5em !important;
+	}
+
+	#welcome-section {
+	  height: 100vh;
+	}
+
+	.row {
+	  margin-right: -15px;
+	  margin-left: -15px;
+	}
+
+	/* Page header section */
+	.jumbotron {
+	  background: transparent;
+	}
+
+	.jumbotron h2 {
+	  color: rgba(250, 200, 90, 0.9);
+	  text-shadow: 1px 1px 0px #000, 1px 1px 0px #fd0;
+	}
+	.jumbotron h3 {
+	  text-shadow: 1px 1px 2px #000, 1px 2px 2px #000;
+	}
+
+	.page-header {
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 30%;
+	  opacity: 0.8;
+	  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	}
+
+	.row.social {
+	  width: 90%;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	/* Portfolio background (office)*/
+	.header {
+	  color: #fff;
+	  background: transparent url("https://images2.imgbox.com/c6/93/WBMZz479_o.jpg")
+	    no-repeat fixed center center / cover;
+	  height: 100vh !important;
+	  text-shadow: 1px 1px 2px #000;
+	}
+
+	/* About section title */
+	.header h3 {
+	  padding: 0 1em;
+	}
+
+	/* Dark but semitranspatent slide style to faciltiate reading */
+	.backgrnd {
+	  background: rgba(0, 0, 0, 0.65);
+	  height: 120vh;
+	}
+
+	/* About section photo */
+	.img-circle {
+	  margin-top: 0.5em;
+	  margin-left: auto !important;
+	  margin-right: auto !important;
+	}
+
+	/* Social buttons */
+	.social {
+	  width: 100%;
+	  text-align: center !important;
+	  display: flex !important;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: space-around;
+	}
+	.social > .btn,
+	.btn-lg {
+	  margin: 5px;
+	  color: #000;
+	  text-shadow: 1px 1px 1px #000;
+	  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+	  letter-spacing: 2px;
+	  transition: all 0.2s ease 0s;
+	}
+
+	/* Body of about section mountains background*/
+	.header2 {
+	  padding-top: 50px;
+	  padding-bottom: 150px;
+	  color: #fff;
+	  background: transparent url("https://images2.imgbox.com/94/37/TtqkEq7t_o.jpg")
+	    no-repeat fixed center center / cover;
+	  height: 850px;
+	  text-shadow: 1px 1px 1px #000;
+	}
+
+	.header2 h2 {
+	  padding-left: 20px;
+	}
+
+	.lead {
+	  padding-left: 20px;
+	  padding-right: 20px;
+	  line-height: 1.7;
+	}
+
+	.lead a {
+	  font-weight: bold;
+	  color: rgb(248, 245, 6) !important;
+	  background-color: transparent;
+	}
+
+	blockquote footer {
+	  color: rgb(248, 245, 6);
+	  background-color: transparent;
+	}
+
+	/* Portofolio section  frozen forest background*/
+	.header3 {
+	  padding-top: 50px;
+	  padding-bottom: 200px;
+	  color: rgba(250, 200, 90, 0.9);
+	  font-weight: 700;
+	  text-shadow: 1px 1px 0px #000, 1px 1px 0px #fd0;
+	  background: transparent url("https://images2.imgbox.com/ed/50/D0iajzRU_o.jpg")
+	    no-repeat fixed center center / cover;
+	  height: 220vh;
+	}
+
+	.portfolio {
+	  margin: 0 0 100px 0;
+	}
+
+	#note {
+	  color: #fff;
+	  background: grey;
+	  width: 26%;
+	  margin: 1rem auto;
+	  border: 1px solid ;
+	  border-radius: 15%;
+	  padding: 0.5rem;
+	  text-shadow: 0 0 0;
+	}
+
+	.header3 h4,
+	h5 {
+	  color: #fff;
+	  font-weight: 700;
+	  text-shadow: 1px 1px 0px #000, 1px 1px 0px #000;
+	}
+
+	/* Contact Me section  blue sky background*/
+	.header4 {
+	  background: transparent url("https://images2.imgbox.com/b7/61/buh7aTIh_o.jpg")
+	    no-repeat fixed center center / cover;
+	  height: 50vh;
+	}
+
+	.header4 .row {
+	  color: rgb(248, 245, 6) !important;
+	  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9), 1px -1px 0px rgba(0, 0, 0, 0.2);
+	  width: 85%;
+	  margin-left: auto !important;
+	  margin-right: auto !important;
+	}
+
+	#mail {
+	  padding-left: 1em;
+	  padding-right: 1em;
+	  padding-top: 0.25em;
+	  padding-bottom: 0.25em;
+	  border: 2px solid rgba(255, 255, 255, 0.2);
+	  border-radius: 10%;
+	  margin-left: auto !important;
+	  margin-right: auto !important;
+	  color: rgb(248, 245, 6) !important;
+	  background-color: red;
+	  font-size: 1.4em;
+	  font-weight: bold;
+	  text-shadow: 1px 1px 1px #000, 1px -1px 0px rgba(0, 0, 0, 0.3);
+	  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+	  letter-spacing: 2px;
+	}
+
+	#center {
+	  position: relative;
+	  top: 5vh;
+	}
+
+	/* Page footer */
+	footer {
+	  background-color: #ccc;
+	  padding-top: 2em;
+	  padding-bottom: 8em;
+	  padding-left: 4em;
+	  height: 30vh;
+	}
+
+	#copy {
+	  position: relative !important;
+	  left: -1.5em;
+	}
+
+	.btn {
+	  width: 11em !important;
+	}
+
+	.nav a {
+	  color: #000 !important;
+	}
+
+	.navbar-header .nav-brand {
+	}
+
+	@media (max-width: 1200px) {
+	  .btn {
+	    width: 11em !important;
+	  }
+
+	  .social {
+	    justify-content: center;
+	    flex-direction: column;
+	  }
+	}
+
+	@media (max-width: 991px) {
+	  .social > .btn,
+	  .btn-lg {
+	    display: block;
+	    max-width: 300px;
+	    margin: 10px auto;
+	  }
+	  .social {
+	    justify-content: center;
+	    flex-direction: column;
+	  }
+	  .backgrnd {
+	    height: 250vh;
+	  }
+	  .header {
+	    height: 120vh !important;
+	  }
+
+	  .header2 {
+	    height: 1250px;
+	  }
+
+	  #welcome {
+	    display: none !important;
+	  }
+
+	  #about {
+	    height: 150vh !important;
+	  }
+
+	  .header4 h2 {
+	    font-size: 1.5em;
+	  }
+
+	  .#mail {
+	    font-size: 1em !important;
+	  }
+
+	  #center {
+	    position: relative;
+	    top: 5vh;
+	    display: flex !important;
+	    justify-content: space-around;
+	  }
+
+	  footer {
+	    height: 50vh;
+	  }
+
+	  .nav a {
+	    font-size: 1.3em;
+	  }
+	  .glyphicon {
+	    margin-right: 0.5em !important;
+	  }
+	  #note {
+	    width: 90%;
+	  }
+	}
+
+	@media (min-width: 768px) and (max-width: 991px){
+	  #note {
+	    width: 50%;
+	  }
+	}
+
+	@media (max-width: 479px) {
+	  .#mail {
+	    font-size: 1em !important;
+	  }
+	  #welcome {
+	    display: none !important;
+	  }
+	  #about {
+	    height: 150vh !important;
+	  }
+
+	  .header2 {
+	    height: 1250px;
+	  }
+
+	  .header4 h2 {
+	    font-size: 1.5em;
+	  }
+
+	  footer {
+	    height: 50vh;
+	  }
+	  .nav a {
+	    font-size: 1.3em;
+	  }
+	  .glyphicon {
+	    margin-right: 0.5em !important;
+	  }
+	}
   </style>
 </head>
 
 <body>
   <!-- Navigation bar and collapsible menu -->
-  <nav class="navbar navbar-default navbar-fixed-top navibar" role="navigation">
-    <div class="container-fluid">
+  <div class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top navibar" role="navigation" id="navbar">
+
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-        <a class="navbar-brand" href="#" id="myName">Mohsen Kaddoura</a>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="https://images2.imgbox.com/3a/7a/Itx4A0Vz_o.png" class="img-responsive" alt="logo" /></a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -249,31 +375,30 @@
           <li><a href="#contact"><span class="glyphicon glyphicon-envelope"> Contact</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
+
+    </nav>
+  </div>
   <!-- End of navigation bar and collapsible menu -->
 
   <!-- Header -->
   <a id="home"></a>
-  <div class="header">
+  <div class="header" id="welcome-section">
     <div class="container-fluid">
       <div class="backgrnd">
-        <div class="section">
-          <div class="jumbotron">
-            <div class="text-center">
-              <h1>Mohsen Kaddoura</h1>
-              <h2>Front End Web Developer/designer</h2>
-              <div class="page-header"></div>
-            </div>
-            <div class="row social">
-              <div class="col-md-2"><a href="https://www.linkedin.com/in/mohsen-kadoura-94845261" target="_blank" class="btn btn-default btn-lg" role="button">LinkedIn</a></div>
-              <div class="col-md-2"><a href="https://twitter.com/MohsenQaddoura" class="btn btn-default btn-lg" target="_blank" role="button">Twitter</a></div>
-              <div class="col-md-2"><a href="https://github.com/Mkado362" class="btn btn-default btn-lg" target="_blank" role="button">Github</a></div>
-              <div class="col-md-2"><a href="#contact" class="btn btn-default btn-lg" role="button">Email</a></div>
-              <div class="col-md-4"><a href="https://www.freecodecamp.com/mkado362" class="btn btn-default btn-lg" target="_blank" role="button">Free Code Camp</a></div>
-            </div>
-            <h3 class="text-center">Welcome to My Portfolio Page</h3>
+        <div class="jumbotron">
+          <div class="text-center">
+            <h1>Mohsen Qaddoura</h1>
+            <h2>Mobile and Web Apps Designer/Developer</h2>
+            <div class="page-header"></div>
           </div>
+          <div class="social">
+            <div><a href="https://www.linkedin.com/in/mohsen-kadoura-94845261" target="_blank" class="btn btn-default btn-lg" role="button">LinkedIn</a></div>
+            <div><a href="https://twitter.com/MohsenQaddoura" class="btn btn-default btn-lg" target="_blank" role="button">Twitter</a></div>
+            <div><a id="profile-link" href="https://github.com/Mohsen-kadoura?tab=repositories" class="btn btn-default btn-lg" target="_blank" role="button">Github</a></div>
+            <div><a href="#contact" class="btn btn-default btn-lg" role="button">Email</a></div>
+            <div><a href="https://www.freecodecamp.com/mkado362" class="btn btn-default btn-lg" target="_blank" role="button">Free Code Camp</a></div>
+          </div>
+          <h3 class="text-center" id="welcome" style="font-size: 2em !important; margin-top: 4em;">Welcome to My Portfolio Page</h3>
         </div>
       </div>
     </div>
@@ -285,29 +410,24 @@
   <div class="header2">
     <div class="container-fluid">
       <div class="backgrnd">
-        <div class="section">
-          <div class="row">
-            <div class="col-sm-6 col-md-4 ">
-              <img class="img-circle img-responsive" src="https://lh3.googleusercontent.com/9OzcU3ex1Xosm49Fkt4U31hKp4u-iiQn0RdoOZNdhWTlRJU-_Hv10G3OxhksYVHbkyTLX0dI4u-CU_Xhhj6sXXk-C0TixL7W6vZAN4liMu29hp3B6NOQ5JFOge3knSxD7UL-TtFNmy9uBBHH8m4xJilAtTm3Okfaz8ScEoeNheCqhml8TXbR8jWUhrGlgOi8c6dMIzOWWniBqWKz4VR3sQPYeOi2zWvVjmF8uHpPWokxGJqRmxsz4uAXTyseo3jkYZURe57Ulwn4hZ1mfYbIKr6AF-N4GNWa-c3EIaITwcKtBJsfMnLz_RCyoukN4VVqaB9fRO36b1aI0NefF1URA6UMptF78UBeRiaQuGt7zJPFvoSqeNoMHFxYKOocSTMtOBvgxqqhHOK8RCbEP3Im2uyDio4avuLGdrDq8nqnu6WUBsDgWRniZd22zLuhdxbvaurmLmKDs4Y-e0c5UwS2aZE8l8P8BSj2TUx2MZ2MJczzZKgvI6nd33MydOy7BqDjMJDwyB3LEaANGwZR-H6_Z88dOYOxYKBu8-UzUURpFmR0u0e-FdvU-SP1GJCAJUqKw9qfk2ZrEHViwCnPKC5IZnfm8UVEsO9rK_eVZJZ1ShcnqaQOOJK5r6d4=w430-h468-no"
-                alt="" width="200">
-              <blockquote>
-                <p>
-                  "I've been passionate about computers, technology, photography and art all my life."
-
-                </p>
-                <footer>Mohsen Kaddoura</footer>
-              </blockquote>
-            </div>
-            <div class="col-sm-12 col-md-8">
-              <h2><strong>Mohsen Kaddoura</strong></h2>
-              <p class="lead">
-                As a web developer and designer I enjoy creating beautiful and functional responsive websites using the latest standards and development tools. My skills include coding in JavaScript, jQuery, HTML, CSS, PHP, and Python as as well as familiarity with SQL,
-                Ruby and Git version control. Frameworks I use include Bootstrap and WordPress. I apply my experience with Photoshop and photography in building attractive websites. I have done several web development and programming courses on
-                <a class="link" target="_blank" href="https://www.freecodecamp.com/mkado362">Free Code Camp</a>, <a class="link" target="_blank" href="https://teamtreehouse.com/mohsenqaddoura"> TreeHouse, <a class="link" target="_blank" href="https://www.codecademy.com/pyMaster14822">Codecademy</a>,
-                and both <a class="link" target="_blank" href="https://courses.edx.org/certificates/5a1fa71a6a284809a4d157386b1026fc">   MIT</a> and <a class="link" href="https://lh3.googleusercontent.com/nyoUx1tD1UkPb_N0TEw8YWyUuS4Kcjh_8WXph8OXdvmLRBTccQM5CB-41VRKZZ_UdPPLKH219VQnNXtDYu7meURkj2xPik6Wvw6KJavZ-YwgBPDxR6SUHMY4KYSdscG1vBk52UJTY1jWH8NZevp4Epo-ytx6Oyx5ovGnFBY_Qi_uEvuTt53LhnEJ0uTAf_ZIfhNsgFIPT85Y4GyMdAgt0lwd7kUqRKDIuK7x_YPt8g0-CfKmynqaNbA5f7oEr67GlEeneuPy5rbSZ9ZR9tX9YXscUaOmBQAwQV5YsCuGf9-tzb2czqU5wVBUvvz4OyXMMLQ78HH_fKPDVb02VDsM6d13kv98Su9QxmLSnl806U_CFdvG-tihJnM-IVsUpzyLOYpP3bxlbcpnNE7co2s7RQNVzQZXXy_9uxioie7UP9jxz5-RqZy7rf1qjM2UFvB--EtmVC7F-odP3uSDTUVwX0_1LDyxZs0j8quWTt_fivXcYb_6LAtSCJzGGBPds6dmTpR9ZesSEaJRYBpexFuBfcT0bRAGvcJXmZzdZy_nBOjRKkJ2RJLpbAm8K9E4u5Xj7Z2iCrRDB1Fn-pBKCPyLYCJaa7dEVbF6rI3CPF4YO9-sT5UzIP8jTCdM=w485-h607-no"
-                  target="_blank">Rice </a>Universities.
+        <div class="row" style="padding-top: 4em !important;">
+          <div class="col-xs-12 col-md-4 text-center">
+            <img src="https://thumbs2.imgbox.com/ff/3c/YdoVJ0gw_t.jpg" class="img-circle img-responsive" alt="man at laptop" width="250" id="profile" />
+            <blockquote>
+              <p class="">
+                "Making attractive and functional mobile apps for you to achieve your goals successfuly"
               </p>
-            </div>
+              <footer>Mohsen Qaddoura</footer>
+            </blockquote>
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <h2><strong>Mohsen Qaddoura</strong></h2>
+            <p class="lead">
+              As a Mobile and Web apps designer/developer I enjoy creating beautiful and functional responsive mobile/web apps using the latest standards and development tools. My skills include coding in JavaScript, HTML, CSS, PHP, as well as familiarity with SQL,
+              and Git version control. Frameworks I use include Bootstrap and WordPress. I have done several web development and programming courses on
+              <a class="link" target="_blank" href="https://www.freecodecamp.com/mkado362">Free Code Camp</a>, <a class="link" target="_blank" href="https://teamtreehouse.com/mohsenqaddoura"> TreeHouse, <a class="link" target="_blank" href="https://www.codecademy.com/profiles/pyMaster14822">Codecademy</a>,
+                and both <a class="link" target="_blank" href="https://courses.edx.org/certificates/5a1fa71a6a284809a4d157386b1026fc"> MIT</a> and <a class="link" href="https://images2.imgbox.com/d0/68/wRyU1JcE_o.jpg" target="_blank" alt="Coursera Python Course">Rice </a>Universities. I am currently studying Mobile Application Design and Development at <a href="https://www.algonquincollege.com/" target="_blank">Algonquin College in Ottawa, Canada</a>
+            </p>
           </div>
         </div>
       </div>
@@ -319,128 +439,77 @@
   <a id="portfolio"></a>
   <div class="header3 text-center">
     <div class="container-fluid">
-      <div class="section Portfolio">
+      <div class="section Portfolio text-center" id="projects">
         <h2><strong>Portfolio Projects</strong></h2>
-        <div class="page-header"></div>
-        <div class="col-xs-6 col-md-4">
-          <div class="row thumbs">
-            <div class="col-md-12">
-              <a href="https://codepen.io/mq1960/full/vLzBQY/" class="thumbnail" target="_blank">
-                <img src="https://lh3.googleusercontent.com/o-Um-xOZ6VsllYYunqgk5YoUNHcsebcS4buWPItrv_2lSh0C52hQl2kHzHGo-wqz8F-KJ6yAWv758ILIN8OfGTeGEa8-8SNQx61Ryn9itAtEOqXFyP0XxtQFF-3oJ96jBPYZvmXisL0GYwhvlJIzzzJMMRn1cc1Gm7YXRmCidP8VIe0t_4V9nK86fExx6ig8LpuLfuT5G3bN_Anxe_usZLBChLuJS43hZtfxvRWF16bVaduZtVjauJddvuDs5BWh-BHXDtLo4tpdzcRWMCtNwRkVHooChOmt8D_oAkVjDGig_3d-cNWMxLP10mIf1R0z7vwP7XYnw_6vf7N1SgLhn26iyJqmI4QwQXO78ENuYzMic2Zg5mYue1rvzRTbqp91r8E8SZDgzER99SwqOrQNTuMnbamcwaJrzgpsOstbsd1r1QrdO_uHJRg30DaMt464qlR8hrexarm8h5Ia95bT4tPMYGt8aFxORuVEgdWRp4v8tGLq2s0rqUog_A0603Bzq0VLRW5H39Wz4umGwFBpOy51SppdtYTSeJwsvzpHCLRyE5i-iBnzEhmV4dhgiuL_iQMW6s4IlhyoA2EJ5lJQKS2f1YLQ3F52g5Rw7BzaUNegLA5DIoH1VjTQ=w1077-h607-no"
-                  alt="Random Quote  App">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <h4>Random Quotes</h4>
-            </div>
-            <div class="col-md-12">
-              <h5>Generate & Tweet Random Quotes</h5>
-            </div>
+        <h5 id="note">*Click thumbnails to open projects</h5>
+        <div class="page-header project-tile"></div>
+
+        <div class="row">
+
+          <div class="col-xs-6 col-sm-4">
+            <a href="https://codepen.io/mq1960/full/vLzBQY/" class="thumbnail" target="_blank">
+              <img src="https://images2.imgbox.com/82/c5/38y9zAnn_o.png" alt="Random Quote App">
+            </a>
+            <h4>Random Quotes</h4>
+            <h5>Generate & Tweet Random Quotes</h5>
           </div>
-        </div>
 
-        <div class="col-xs-6 col-md-4">
-          <div class="row thumbs">
-            <div class="col-md-12">
-              <a href="https://codepen.io/mq1960/full/OMrNYe/" class="thumbnail" target="_blank">
-                <img src="https://lh3.googleusercontent.com/x3l-gLkrNbhylCC6d3zGnr7CzeBk0YDFeTyyLxUyRSuvlAEMA3oq_MyoIJBK0OhKGjpYAq8800ZoVFadToA6BG7y5fz_jXue_ayky_F_sZ4OmcNzxwJyaKUYRsOXKuV56dQKzpZvkmM6orbg2eCI9GQq6gVaSZYt0Homc4qRoJTYPOTQbnn_XO6Hap2me4GUhubT96lEBz3wIJ9jLRbdNGaw3iA6DXzSkVQcsuGrReiY8TxucX8TqqEaq6LW6gS4YcondCEEyZCXUSlNjJ7gAI9nb01tKCS8B1Rf5Cuf0nmvIvE-Q44EoyrJPFV7m2iKSWMfeOAMc2xi9ag9LVghsBJDaFnRWsa7BHB63bXRpPnGBPkaNpGjPO5sV5joOaAk_gqHb83Ms1Mpm7SATPVDmzuCXIMSLv35AxRj-K_fOj2zbWU5UZ-VmeiVHsMJ-88x-fRxgXVoMUfPPbCgPp-Jr94Qg7WUQuvnGhpLOCUyXW3-3Vihx6NgvBCLUw-HrycFMPB_ftcbbt8IQbnTtULl5DzPuR_u_PaXr28I7JmEKsg9f797VTlyt49AN6i7d2wJCsiElxMg9pD0NaMJC1uQJ3J11nIqmdYX16iSmBR3eas8r3AjKVGnMrMj=w1077-h605-no"
-                  alt="Mini Calculator">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <h4>Mini Calculator</h4>
-            </div>
-            <div class="col-md-12">
-              <h5>Simple Calculator with multiple chained operations ability</h5>
-            </div>
+          <div class="col-xs-6 col-sm-4">
+            <a href="https://codepen.io/mq1960/full/OMrNYe/" class="thumbnail" target="_blank">
+              <img src="https://images2.imgbox.com/e9/14/Z2sMSijy_o.png" alt="Mini Calculator">
+            </a>
+            <h4>Mini Calculator</h4>
+            <h5>Simple Calculator</h5>
           </div>
-        </div>
 
-        <div class="col-xs-6 col-md-4">
-          <div class="row thumbs">
-            <div class="col-md-12">
-              <a href="https://codepen.io/mq1960/full/bpNoOX/" class="thumbnail" target="_blank">
-                <img src="https://lh3.googleusercontent.com/k1m4z-Lko67lCILASyGPPISJvkKYUBRh7GSvtb6QiTbTFagOJBKW8lcd1AQr9ejgXdCw2K2wypSnAY21XRVm_yi94S3q_46sTPInAE3Bu_oyUaBkNBUHJERg2p8wbbfHyEhT5lEPlCLLczy37SsC_riOcZzty8D_H37R_ElG8gnaV3ZQ1uTwrz2gdAkw2WckYR9VZOBNqlPFYh4y4SmcwfUIRK99P6SbSmX3_AXuatb2VYbSjRXdxZnU5zUkn1HyUNDyqToaAfSzna8cvbgMGBjXptDPLQlsrHnifg3UnxwUZMdLXnqj6Oxi0G6cp0j3VeZTudYEPzh4yEdiVaWRq3yn2FUmmLI81hZ-8QsTJnxIpRZI9ag0QWz75OrkTSvhv70EgI-wgGpVpDeYgvCstx8sOlZsOnG8Wp3qVJbOtz_8uqkYbK6sJ1fRWu4eQKk3456U8YmXyzC1khrttSZMH6ihjtGN5ex5_8L4mkx8DlNxwA6-4_GkSN-7kLbh3yTDtiz13y7TZ02MOGUbbolS3V00roqNjJFx5jlmqHx6PymPwXAz9upt7A9hBmnwY2RYfSCx06VjL0KVpL6WVcAEZmFP7eRQjsEaGpNTm9UKsAr1yjE7HlHR6aRV=w780-h440-no"
-                  alt="Mandela Tribute Page">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <h4>A Tribute</h4>
-            </div>
-            <div class="col-md-12">
-              <h5>A tribute page.</h5>
-            </div>
+          <div class="clearfix visible-xs-block"></div>
+          <div class="col-xs-6 col-sm-4">
+            <a href="https://codepen.io/mq1960/full/bpNoOX/" class="thumbnail" target="_blank">
+              <img src="https://images2.imgbox.com/31/da/bpzA8Xr8_o.jpg" alt="Mandela Tribute Page">
+            </a>
+            <h4>A Tribute</h4>
+            <h5>A tribute page.</h5>
           </div>
-        </div>
-        <div class="clearfix visible-md-block visible-lg-block"></div>
-        <div class="col-xs-6 col-md-4">
-          <div class="row thumbs">
-            <div class="col-md-12">
-              <a href="https://codepen.io/mq1960/full/grwbbz/" class="thumbnail" target="_blank">
-                <img src="https://lh3.googleusercontent.com/eKYQNBXDzjB7CrxxNKGd_ufxqpFpseV-iillhcPsecOOOsAi0IL6TmyBCAPt_KZPJQGLTNinireT1NW6WTqdJ7VHx2lL3h-oxMoNFnYDinA_w_6xJq71Uanowy8pmslWPD9yKgR1awR7iRKU4WrlWyePcU5PXYDcD2s79p5uZ_nhB4HNhJznMbjNg1zZXQc1oM641uskFngU3GpYbRRlWeDKZyOuCqxGtWmBDXl1sCv6yp4TnjWcqUVUTUeBx0hwDZC8_sv592zr-KVfCSQdiuIiRtXSsmcikLkDJSrJBsFOwjmPYnmD0bksWBnkl7BlVRSmtz8WlZ4yR_RB9SF3EijRajbw9ec8q3C0fWwJnE6jpSeZCSSoVQDY8CXPSoqlZBbGjbUEPfdhwkeqQyX5jGi4zFoO1zwgDr3JWDUKqr_zvjSZh9pt4DWfSwMd-4dcT9acSNvtm_-MWxm8lt2L9rSBJ5qLWeDTRYD5vYKsmISkTkHtiIcuN9ZSWIKmfqELV60q8cQBBN7EMOH6glyJU9Lo-wt92aGGvGz7mh6FeFlU9VuU4Iu52WbeqIr7XI0ccrVdgPBW4OyExigXj8frpCz1YPmz9h_5nq7Tb7JFPILKpv-J96wcUitU=w780-h440-no"
-                  alt="Weather App">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <h4>Local Weather App</h4>
-            </div>
-            <div class="col-md-12">
-              <h5>Shows the local Weather</h5>
-            </div>
+
+          <div class="col-xs-6 col-sm-4">
+            <a href="https://codepen.io/mq1960/full/grwbbz/" class="thumbnail" target="_blank">
+              <img src="https://images2.imgbox.com/09/21/nTxq5Apk_o.jpg" alt="Weather App"></a>
+            <h4>Local Weather App</h4>
+            <h5>Shows the local Weather</h5>
           </div>
-        </div>
 
-        <div class="col-xs-6 col-md-4">
-          <div class="row thumbs">
-            <div class="col-md-12">
-              <a href="https://codepen.io/mq1960/full/pbkKOE/" class="thumbnail" target="_blank">
-                <img src="https://lh3.googleusercontent.com/yZcu5pxWqiuFXSS13rSkR8784MnELOtLfOcZqfXelPq7i086joCpBzDicUe0o9_5ySW7Z-BIy0RgwwhqYsbG_EvTyKHXF6OYmxsJX6xV6fZJsQFODRjfivrHfVCoOZNdNxf23EJLeWMUm8oGPu9cttkcdIEJ5w2gQVkqfditJ8SUmFdjS8AR29GfBqRWA6psTiQRemNJ4R_DmX2qiaKECp_UQvqg2uxPChv1RB2oeub3U7_nMt56hZRDrzQKe1y3oUYZGuDDm4KgFgFpPSCGEDkMYDPt6KnpmokDQPiKFmfAsvZAX7v4GYwsvVLTkVR9JzYwspZPcgo86zg-d7Yp2TkQctrY0fe0-Wal9ZrvO8FN6JQKxdbTC4KebhTWlh1vdIMK_Jq2zbm4_n6w3Kl1ZdU72fIbf3e0PQTJJteOfBz9GaWMhxyA2cP-DbFpGUu-k8jSa2dsC6_9947hFJONc26D8ltJ5W4l9iSiM4i4DCWiXrMtPwUJIVIAb092KM1cjTUMpf_WMhaA8xvKDsVlwXyaqPiEr929zWBXUhIfnYGEFOTAV8k0Y3GkL4Ds8G3_xp-XcQS9ZUpkUYVK7qHzNC34DKMWjDrhd0Kt0jDNm6tR47a_zTO5NAn8=w309-h174-no"
-                  width="309" height="174" alt="Pomodoro clock">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <h4>Pomodoro Clock</h4>
-            </div>
-            <div class="col-md-12">
-              <h5>Pomodor Clock</h5>
-            </div>
+          <div class="clearfix visible-xs-block"></div>
+          <div class="col-xs-6 col-sm-4">
+            <a href="https://codepen.io/mq1960/full/pbkKOE/" class="thumbnail" target="_blank">
+              <img src="https://images2.imgbox.com/eb/5b/d5xMssUY_o.jpg" width="309" height="174" alt="Pomodoro clock"></a>
+            <h4>Pomodoro Clock</h4>
+            <h5>Pomodor Clock</h5>
           </div>
-        </div>
 
-        <div class="col-xs-6 col-md-4">
-          <div class="row thumbs">
-            <div class="col-md-12">
-              <a href="https://codepen.io/mq1960/full/pyejRP/" class="thumbnail" target="_blank">
-                <img src="https://lh3.googleusercontent.com/6XFXCiwCfw6-2dOiAPjgEr_34jmgtbhSSJrWiNam-C2nzLg2Yd5vamb6_fsT81R_1usH93MqyTk0eBtzzd_5ApUuv49qxeXCU3Oyf4KXKrORYUS_aYqAHbY4tiYPl_AImI508za73dfhoWFZMYR5Uwel5jPxqyVl-amv_9llisdT52r1h2zssA58dT2inbec7O4LEwFN3Zzlk6Q2LN5Uj0OVXJlUtv_iEyGwMInyfCMWp-4rjbSorbLiB-IG99rveDK93HMNN8JX7BtAlL4BN5KxfZznND394hvwDbQMDpOzy6vWjErP_T5j2OSEJBfRgbSm--8VR-C3_siBa3IckKicOmIVA7GLwuPQlJZqG4NXD6Dw5Z2A27iTTFdicdAZeQ3eFQnZa2owfWv4I7rytuyzu2fPFGpy2QqoncikFKvCekg7BxDNcSglso34hRmMuUJS_Eye6deH2GFTrIx4DqksuhSoNmD1Cuob8H3v00ah-et-L2_eReLYh6PaymxR2IGI0aa-Dp0Yf02F3nmusVPvK6xjWNp6sbkrIm0Rj8g754WMZrp-jvc2iLmog20fTf8J82bpDm-Swq0l_RwxWj8zlHeZWQaUiffk2cgD-dHn__lPvIgvrL-e=w1077-h605-no"
-                  alt="Instant Wikipedia Viewer">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <h4>Instant Wikipedia Viewer</h4>
-            </div>
-            <div class="col-md-12">
-              <h5>Instant Wikipedia Viewer for fast facts checkup</h5>
-            </div>
+          <div class="col-xs-6 col-sm-4">
+            <a href="https://codepen.io/mq1960/full/pyejRP/" class="thumbnail" target="_blank">
+              <img src="https://images2.imgbox.com/c7/8d/A0EuBdoa_o.png" alt="Instant Wikipedia Viewer"></a>
+            <h4>Instant Wikipedia Viewer</h4>
+            <h5>Instant Wikipedia Viewer for fast facts checkup</h5>
           </div>
-        </div>
 
-        <div class="col-xs-6 col-md-4">
-          <div class="row thumbs">
-            <div class="col-md-12">
-              <a href="https://codepen.io/mq1960/full/PzGJPp" class="thumbnail" target="_blank">
-                <img src="https://lh3.googleusercontent.com/UP52JkpO7l3K0HKC2iKiCe-jUbLHu4w_Vu7En7DIvqaOc5W-OA_UBpGYDpoSl9peJIVjbJx0QZH9ba836Fym1HoUj2vBrCuHS-nBu_wyzrnRg_nQIvUWz8qBzR7oungSx39ipVqkS4uRULThwWdfmqosHAv5AyQ0SnRYCtRfAatTUWpcacMkCm0ecRN79c-rTdkJoZ33YqT5YJDpwKF2qYAULbG96MpF8TR1IR-Pr9TP7jjmbQryfBuSCkeb_68mGuViheYUQd4uLkBCCuVKpON7cCKCBoVQ8TBKYF1phKZZ_BCD2raKW_sP3P3QrFutNKEmSYtpmMhf4fiiVSUoc1WOv__eY-2qbsI458IE9-m4Ihizod77LiR04MUR19vnKqxkJZYMz0qU0xzd0gQ1k90xl4WoGOLAEjGLLdQcUUAZsEUNM3UQweZNfM7BA0AGyDG40fqq-PPdX6ToamEup9t0lqSXSUILUC77Tu4fyyVWbEObnju47cZhTcSgfXoyGif790rXm8an4YUYeujZQPBXpJ-WQLCarjXcWzbUXT9TvatoUC7gGDXt31UmO5ZLfClkS4Cd-XLA6tYaxhg3B1PIoUvaUV10UrRjcYbANG--G8CtO_bCEnUe=w1077-h605-no"
-                  alt="Random Quote  App">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <h4>TWITCH TV</h4>
-              <h5>Twitch TV Selected Channels</h5>
-            </div>
-
+          <div class="clearfix visible-xs-block"></div>
+          <div class="col-xs-6 col-sm-4">
+            <a href="https://codepen.io/mq1960/full/PzGJPp" class="thumbnail" target="_blank">
+              <img src="https://images2.imgbox.com/8c/a9/emPIB8C4_o.jpg" alt="Twitch tv"></a>
+            <h4>TWITCH TV</h4>
+            <h5>Twitch TV Selected Channels</h5>
           </div>
+
+          <div class="col-xs-6 col-sm-4">
+            <a href="http://mohsenkadoura.epizy.com/" class="thumbnail" target="_blank">
+              <img src="https://thumbs2.imgbox.com/e3/54/WGbj0bhw_t.png" alt="Woocommerce store"></a>
+            <h4>Woocommerce Store</h4>
+            <h5>WordPress / Woocommerce Online store</h5>
+          </div>
+
+          <div class="clearfix visible-xs-block"></div>
         </div>
-
-
       </div>
     </div>
   </div>
@@ -451,15 +520,17 @@
   <div class="header4 text-center">
     <div class="container-fluid">
       <div class="backgrn">
-        <div class="row">
-          <div class="col-xs-10 col-sm-8 col-sm-offset-2">
+        <div class="row text-center">
+          <div class="col-xs-12">
+            <br><br>
             <h2>Connect with Me on:</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-xs-pull-1 col-sm-8 col-sm-offset-3">
-            <a href="#home" class="link">eesa.ahmad@gmail.com</a>
-          </div>
+
+        <div class="col-xs-12 " id="center">
+          <a href="#home" id="mail">
+            eesa.ahmad@gmail.com
+          </a>
         </div>
       </div>
     </div>
@@ -470,7 +541,7 @@
   <footer>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-8">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li><a href="#about"><span class="glyphicon glyphicon-book"></span> About</a></li>
@@ -480,8 +551,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12  text-center">
-          Copyright © Mohsen Kaddoura
+        <div class="col-xs-12 text-center" id="copy">
+          Copyright © Mohsen Qaddoura
           <script>
             document.write(new Date().getFullYear());
           </script>. All Rights Reserved
@@ -491,5 +562,4 @@
   </footer>
   <!-- End of page Footer -->
 </body>
-
 </html>
